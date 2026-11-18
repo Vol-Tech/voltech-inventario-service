@@ -1,0 +1,8 @@
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/InventarioApplication.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoCreateRequest.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoResponse.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/mapper/ProductoMapper.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/model/Categoria.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/model/Producto.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/repository/ProductoRepository.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/service/ProductoService.java
