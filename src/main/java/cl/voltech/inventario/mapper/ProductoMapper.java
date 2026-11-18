@@ -11,12 +11,16 @@ public class ProductoMapper {
 
     public Producto toModel(ProductoCreateRequest request) {
         Producto producto = new Producto();
+        updateModel(request, producto);
+        return producto;
+    }
+
+    public void updateModel(ProductoCreateRequest request, Producto producto) {
         producto.setNombre(request.nombre());
         producto.setDescripcion(request.descripcion());
         producto.setPrecio(request.precio());
         producto.setStock(request.stock());
         producto.setImagenUrl(request.imagenUrl());
-        return producto;
     }
 
     public ProductoResponse toResponse(Producto producto) {

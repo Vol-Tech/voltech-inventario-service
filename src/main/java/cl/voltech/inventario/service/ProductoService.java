@@ -48,9 +48,14 @@ public class ProductoService {
             .orElseThrow(() -> new ProductoNoEncontradoException(id));
     }
 
-    public Producto actualizarProducto(Integer id, Producto datosProducto) {
-        buscarProductoId(id);
-        datosProducto.setId(id);
-        return productoRepo.save(datosProducto);
+    public ProductoResponse actualizarProducto(Integer id, ProductoCreateRequest request) {
+        Producto producto = buscarProductoId(id);
+        Categoria categoria = categoriaRepo.findById(request.categoriaId())
+            .orElseThrow(() -> new CategoriaNoEncontradaException(request.categoriaId()));
+
+        productoMapper.updateModel(request, producto);
+        producto.setCategoria(categoria);
+
+        return productoMapper.toResponse(productoRepo.save(producto));
     }
 }
