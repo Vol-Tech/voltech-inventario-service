@@ -1,1 +1,0 @@
-# voltech-inventario-service
