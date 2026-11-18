@@ -3,7 +3,6 @@ package cl.voltech.inventario.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import cl.voltech.inventario.dto.ProductoCreateRequest;
 import cl.voltech.inventario.dto.ProductoResponse;
@@ -20,29 +19,27 @@ public class ProductoService {
 
     private final ProductoRepository productoRepo;
     private final CategoriaRepository categoriaRepo;
-    private final ProductoMapper productoMap;
+    private final ProductoMapper productoMapper;
 
     public ProductoService(ProductoRepository productoRepo, CategoriaRepository categoriaRepo,
-            ProductoMapper productoMap) {
+            ProductoMapper productoMapper) {
         this.productoRepo = productoRepo;
         this.categoriaRepo = categoriaRepo;
-        this.productoMap = productoMap;
+        this.productoMapper = productoMapper;
     }
 
-    @Transactional
     public ProductoResponse crearProducto(ProductoCreateRequest request) {
         Categoria categoria = categoriaRepo.findById(request.categoriaId())
             .orElseThrow(() -> new CategoriaNoEncontradaException(request.categoriaId()));
-        Producto nuevoProducto = productoMap.toModel(request);
+        Producto nuevoProducto = productoMapper.toModel(request);
         nuevoProducto.setCategoria(categoria);
 
-        return productoMap.toResponse(productoRepo.save(nuevoProducto));
+        return productoMapper.toResponse(productoRepo.save(nuevoProducto));
     }
 
-    @Transactional(readOnly = true)
     public List<ProductoResponse> listarTodosProductos() {
         return productoRepo.findAll().stream()
-            .map(productoMap::toResponse)
+            .map(productoMapper::toResponse)
             .toList();
     }
 
