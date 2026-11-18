@@ -1,8 +1,13 @@
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/InventarioApplication.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/controller/ProductoController.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoCreateRequest.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoResponse.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/exception/CategoriaNoEncontradaException.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/exception/ProductoExceptionHandler.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/exception/ProductoNoEncontradoException.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/mapper/ProductoMapper.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/model/Categoria.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/model/Producto.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/repository/CategoriaRepository.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/repository/ProductoRepository.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/service/ProductoService.java
