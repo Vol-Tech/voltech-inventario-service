@@ -48,6 +48,10 @@ public class ProductoService {
             .orElseThrow(() -> new ProductoNoEncontradoException(id));
     }
 
+    public ProductoResponse obtenerProductoPorId(Integer id) {
+        return productoMapper.toResponse(buscarProductoId(id));
+    }
+
     public ProductoResponse actualizarProducto(Integer id, ProductoCreateRequest request) {
         Producto producto = buscarProductoId(id);
         Categoria categoria = categoriaRepo.findById(request.categoriaId())
