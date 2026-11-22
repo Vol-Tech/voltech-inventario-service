@@ -1,4 +1,5 @@
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/InventarioApplication.java
+/home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/config/SecurityConfig.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/controller/ProductoController.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoCreateRequest.java
 /home/cyclops/workspace/fullstack/voltech-inventario-service/src/main/java/cl/voltech/inventario/dto/ProductoResponse.java

@@ -1,2 +1,3 @@
+cl/voltech/inventario/config/SecurityConfig.class
 cl/voltech/inventario/repository/CategoriaRepository.class
 cl/voltech/inventario/exception/CategoriaNoEncontradaException.class
