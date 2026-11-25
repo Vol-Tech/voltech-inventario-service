@@ -52,6 +52,10 @@ public class ProductoService {
         return productoMapper.toResponse(buscarProductoId(id));
     }
 
+    public void eliminarProducto(Integer id) {
+        productoRepo.delete(buscarProductoId(id));
+    }
+
     public ProductoResponse actualizarProducto(Integer id, ProductoCreateRequest request) {
         Producto producto = buscarProductoId(id);
         Categoria categoria = categoriaRepo.findById(request.categoriaId())
